@@ -36,7 +36,7 @@
     "build-js": "react-scripts build",
     "postbuild": "mv ./build/favicons/* ./build/ && rm -r ./build/favicons && purgecss --css build/static/css/*.css --content build/static/index.html build/static/js/*.js --out build/static/css",
     "test": "npm-run-all build-css build-js && react-scripts test --env=jsdom",
-    "deploy": "gh-pages -d build"
+    "deploy": "netlify deploy --prod"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",
